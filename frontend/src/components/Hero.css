@@ -1,0 +1,15 @@
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .explore-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

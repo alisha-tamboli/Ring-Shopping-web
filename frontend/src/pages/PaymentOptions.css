@@ -1,0 +1,38 @@
+.payment-options-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .qr-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .qr-item img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .payment-options-container a {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .payment-options-container button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
