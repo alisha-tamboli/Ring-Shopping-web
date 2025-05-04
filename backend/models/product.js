@@ -9,14 +9,27 @@ const mongoose = require("mongoose");
       },
       name: String,
       price: Number,
-      description: String,
+      description: {type: String, index: true },
+      keywords: {type: [String], default: [], index: true },
       image: String,
       status: { type: String, default: "Active" },
     },
     { timestamps: true }
   );
   
-  module.exports = mongoose.model("Product", productSchema);
-  
+  // Create text index for search
+    productSchema.index({
+      name: 'text',
+      description: 'text',
+      keywords: 'text'
+    }, {
+      weights: {
+        name: 3,        // Name matches are most important
+        description: 1,
+        keywords: 2     // Keyword matches are medium importance
+      }
+    });
 
-module.exports = mongoose.model("Product", productSchema);
+
+module.exports =  mongoose.models.Product || mongoose.model("Product", productSchema);
+

@@ -75,7 +75,7 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
   
     try {
-      const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -129,8 +129,9 @@ const AdminDashboard = () => {
         <h3>Admin Panel</h3>
         <ul>
           <li>Products</li>
-          <li>Categories</li>
+          <li>Users</li>
           <li>Orders</li>
+          <li>Reports</li>
           <li onClick={handleLogout}>Logout</li>
         </ul>
       </div>

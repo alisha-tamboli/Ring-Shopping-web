@@ -1,42 +1,3 @@
-// const express = require("express");
-// const router = express.Router();
-// const multer = require("multer");
-// const Product = require("../models/Product");
-
-// const upload = require("../multer");
-
-// router.post("/addProduct", upload.single("image"), async (req, res) => {
-//   try {
-//     console.log("Incoming data...");
-//     console.log("Body:", req.body);
-//     console.log("File:", req.file); // <-- very important
-
-//     const { name, description, price } = req.body;
-//      if (!req.file || !req.file.path) {
-//       return res.status(400).json({ error: "Image upload failed" });
-//     }
-//     const imageUrl = req.file.path;
-
-//       const product = new Product({
-//         name,
-//         description,
-//         price,
-//         imageUrl,
-//       });
-
-//       await product.save();
-//        console.log("Product saved successfully!:", product);
-//        res.status(201).json({ message: "Product added successfully!" });
-//     }
-//     catch (error) {
-//       console.error("Saving error:", error);
-//       res.status(500).json({ error: "Something went wrong!" });
-//     }
-
-//   });
-
-// module.exports = router;
-
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/product");
@@ -86,6 +47,19 @@ router.get("/products", async (req, res) => {
   }
 });
 
+// GET single products
+router.get("/products/:id", async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+    res.json(product);
+  } catch (error) {
+    console.error("Fetching error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 // DELETE: Delete a product
 router.delete('/:id', async (req, res) => {
@@ -122,7 +96,6 @@ router.put("/updateStatus/:id", async (req, res) => {
       { status },
       { new: true }
     );
-
     res.status(200).json({ message: "Status updated", updated });
   } catch (err) {
     console.error("Status update error:", err);

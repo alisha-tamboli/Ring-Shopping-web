@@ -9,6 +9,9 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProductDetails from "./pages/ProductDetails"; 
+import Checkout from "./pages/Checkout";
+import SearchResults from "./pages/SearchResults";
+import PaymentOptions from "./pages/PaymentOptions";
 
 function App() {
   const userRole = localStorage.getItem("role");
@@ -30,9 +33,11 @@ function App() {
             path="/adminDashboard"
             element={userRole === "admin" ? <AdminDashboard /> : <Home />}
           />
-
           {/* Product Details Route */}
           <Route path="/product-details/:productId" element={<ProductDetails />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path="/search-results" element={<SearchResults />} />
+          <Route path="/paymentOptions" element={<PaymentOptions />} />
         </Routes>
       </main>
     </div>

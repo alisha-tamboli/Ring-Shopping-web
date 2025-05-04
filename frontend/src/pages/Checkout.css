@@ -1,93 +1,66 @@
-.checkout-container {
-  max-width: 400px;
-  margin: auto;
+.checkout-page {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.left-section, .right-section {
+  width: 45%;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fafafa;
 }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  .checkout-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .checkout-form label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  .checkout-form input,
-  .checkout-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
 
-  /* label {
-    margin-bottom: 10px;
-    font-weight: bold;
-  } */
-/*   
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  } */
-  
-  .payment-options {
-    margin: 10px 0;
-  }
-  
-  .place-order-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-  }
-  
-  .place-order-btn:hover {
-    background-color: #218838;
-  }
-  
-  .order-confirmation {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .blue-tick {
-    font-size: 40px;
-    color: blue;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
+.add-address-btn, .save-btn, .continue-btn, .back-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
 
-  button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+.add-address-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.explore-btn {
+  background-color: black;
+  color: white;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.address-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.price-card {
+  margin-top: 20px;
+}
+
+.price-card p, .price-card h3 {
+  margin: 8px 0;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.continue-btn {
+  background-color: #17a2b8;
+  color: white;
+}

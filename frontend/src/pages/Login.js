@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -54,10 +55,10 @@ const Login = () => {
   return (
     <div
     style={{
-      backgroundImage: `url(${process.env.PUBLIC_URL}/images/womenring4.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/images/loginimg.jpg)`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
+      nodebackgroundRepeat: 'no-repeat',
       height: '100vh',
       display: 'flex',
     }}
@@ -68,6 +69,10 @@ const Login = () => {
         <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
         <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
         <button type="submit">Login</button>
+            <div className="login-redirect">
+                  Don't have an account?{" "}
+                  <Link to="/signup">Register here</Link>
+                </div>
       </form>
     </div>
     </div>

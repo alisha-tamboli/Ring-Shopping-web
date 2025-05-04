@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
-import Footer from "../components/Footer";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -40,20 +39,12 @@ const Products = () => {
               <p>{product.description}</p>
               <p>₹ 
                 <b>{product.price}</b></p>
-              {/* <button
-                  className="view-details"
-                  onClick={() => navigate("/productDetails")}
-                >
-                  Buy Now
-                </button> */}
-                  {/* Use Link to navigate to ProductDetails page */}
             <Link to={`/product-details/${product._id}`}>
-              <button className="view-details">Buy Now</button>
+              <button className="save-btn">Buy Now</button>
             </Link>
             </div>
           ))}
         </div>
-            <Footer />
     </div>
       );
     };

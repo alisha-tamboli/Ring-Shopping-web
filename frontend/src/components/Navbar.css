@@ -1,26 +1,88 @@
 .navbar {
     display: flex;
+    font-family: cursive;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
     background-color: white;
+    height: 50px;
+    width: 94%;
+    color: black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .logo {
+.logo {
     height: 50px;
-    width: 170px;
     font-weight: 700;
     font-size: 2rem;
-  }
-  .nav-links {
+    transition: color 0.2s ease-in-out;
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: #f3c009ec;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar2{
+    height: 50px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 45%;
+    background-color: #f3c009ec;
+    color: #333;
+    margin-left: 928px;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
-  
-  .nav-links li {
+    font-size: 1.13rem;
+    font-weight: 650;
+    justify-content: flex-end;
+    margin-right: 33px;
+}
+
+.nav-links li:hover{
     cursor: pointer;
-    font-weight: bold;
-  }
-  
+    transition: color 0.2s ease-in-out;
+    color: white;
+}
+
+/* search bar */
+.nav-search {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    height: 40px;
+    border-radius: 3px;
+    margin-left: 60px;
+    border: 1.3px solid #333;
+    transition: border 0.2s ease-in-out;
+}
+
+.nav-search:hover {
+    border: 2px solid #f3c009ec;
+}
+
+.search-input {
+    width: 100%; 
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #585555;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: white;
+    cursor: pointer;
+}

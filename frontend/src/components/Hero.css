@@ -6,10 +6,16 @@
   
   .explore-btn {
     padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    height: 45px;
+    width: 10%;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 50px;
   }
-  
+  .explore-btn:hover {
+    background-color: #f3c009ec;
+    color: #333;
+  }
